@@ -33,37 +33,29 @@ function inserisciRiquadro(numero){
   sq._sqID = numero
   
 
-
   /////////////////////////////
   //////Funzione///Click///////
   /////////////////////////////
   
   sq.addEventListener("click", 
   
-  function(){
-    
-    console.log(this.dataset.sqid)
-    
-    const numero = this._sqID;
-    
-    this.innerHTML = this._sqID;
+    function(){
+      
+      // Se l'elemento non ha la classe 'clicked', mostra il numero all'interno dell'elemento
 
-    console.log(this.sqID);
+      if (!this.classList.contains("clicked")) {
+        this.innerHTML = this._sqID;
+      } else {
+        this.innerHTML = "";
+      }
+      
+      this.classList.toggle("clicked");
 
-    // Se l'elemento non ha la classe 'clicked', mostra il numero all'interno dell'elemento
-
-    if (!this.classList.contains("clicked")) {
-      this.innerHTML = this._sqID;
-    } else {
-      this.innerHTML = "";
-    }
-    
-    this.classList.toggle("clicked");
+      console.log(this._sqID)
   })
   // Restituisce l'elemento 'sq' così che possa essere aggiunto al codice
   return sq
 }
-
 
 ///////////////////////
 /////////RESET/////////

@@ -1,5 +1,9 @@
-.main-wrapper{
+body{
   background-color: gold;
+
+}
+
+.main-wrapper{
   height: 100vh;
 }
 
