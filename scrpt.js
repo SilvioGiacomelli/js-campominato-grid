@@ -20,7 +20,6 @@ function inizio(){
 }
 }
 
-
 // Definizione della funzione inserisciRiquadro che crea un quadrato (div) con un numero associato
 function inserisciRiquadro(numero){
   
@@ -49,6 +48,8 @@ function inserisciRiquadro(numero){
     
     this.innerHTML = this._sqID;
 
+    console.log(this.sqID);
+
     // Se l'elemento non ha la classe 'clicked', mostra il numero all'interno dell'elemento
 
     if (!this.classList.contains("clicked")) {
@@ -58,11 +59,6 @@ function inserisciRiquadro(numero){
     }
     
     this.classList.toggle("clicked");
-
-    // Alterna una classe basata sul fatto che il numero sia pari o dispari
-    // (si assume che la funzione getOddEvenClass esista e determini la classe corretta in base al numero)
-    this.classList.toggle(getOddEvenClass(numero));
-    
   })
   // Restituisce l'elemento 'sq' così che possa essere aggiunto al codice
   return sq
