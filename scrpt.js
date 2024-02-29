@@ -14,6 +14,7 @@ function inizio(){
   reset()
 
   for(let i = 1; i <= 100; i++){
+
   const square = inserisciRiquadro(i)
 
   gridContainer.append(square)
@@ -29,12 +30,8 @@ function inserisciRiquadro(numero){
 
   // Imposta la classe dell'elemento a "square"
   sq.className = "square"; 
-
-  // Imposta una proprietà personalizzata '_sqID' con il valore del 'numero' passato alla funzione
-  sq._sqID = numero
   
-
-  /////////////////////////////
+  //////////////////////////////////////////////////THIS è il padre dello scope///////
   //////Funzione///Click///////
   /////////////////////////////
   
@@ -45,14 +42,14 @@ function inserisciRiquadro(numero){
       // Se l'elemento non ha la classe 'clicked', mostra il numero all'interno dell'elemento
 
       if (!sq.classList.contains("clicked")) {
-        sq.innerHTML = this._sqID;
+        sq.innerHTML = numero;
       } else {
         sq.innerHTML = "";
       }
       
       sq.classList.toggle("clicked");
 
-      console.log(this._sqID)
+      console.log(numero)
   })
   // Restituisce l'elemento 'sq' così che possa essere aggiunto al codice
   return sq
