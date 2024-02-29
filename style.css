@@ -1,0 +1,29 @@
+.main-wrapper{
+  background-color: gold;
+  height: 100vh;
+}
+
+.grid-container{
+  width: 800px;
+  aspect-ratio: 1;
+}
+
+.square{
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  background-color: khaki;
+  border: 10px solid white;
+}
+
+.btn-start{
+  width: 100%;
+  height: 100%;
+}
+
+.square.clicked{
+  background-color: rgb(14, 138, 215);
+}
