@@ -51,8 +51,11 @@ function inserisciRiquadro(numero){
 
       console.log(numero)
   })
+
   // Restituisce l'elemento 'sq' così che possa essere aggiunto al codice
+
   return sq
+  
 }
 
 ///////////////////////
