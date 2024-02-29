@@ -21,6 +21,7 @@ function inizio(){
 }
 
 // Definizione della funzione inserisciRiquadro che crea un quadrato (div) con un numero associato
+
 function inserisciRiquadro(numero){
   
   // Crea un nuovo elemento div e lo assegna alla variabile 'sq'
@@ -43,13 +44,13 @@ function inserisciRiquadro(numero){
       
       // Se l'elemento non ha la classe 'clicked', mostra il numero all'interno dell'elemento
 
-      if (!this.classList.contains("clicked")) {
-        this.innerHTML = this._sqID;
+      if (!sq.classList.contains("clicked")) {
+        sq.innerHTML = this._sqID;
       } else {
-        this.innerHTML = "";
+        sq.innerHTML = "";
       }
       
-      this.classList.toggle("clicked");
+      sq.classList.toggle("clicked");
 
       console.log(this._sqID)
   })
